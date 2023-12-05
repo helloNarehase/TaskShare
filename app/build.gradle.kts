@@ -59,6 +59,13 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+    sourceSets {
+        getByName("main") {
+            assets {
+                srcDirs("src\\main\\assets", "src\\main\\assets")
+            }
+        }
+    }
 }
 
 dependencies {
@@ -68,12 +75,10 @@ dependencies {
 //    implementation ("org.tensorflow:tensorflow-lite-task-text:0.4.0")
 //    implementation ("org.tensorflow:tensorflow-lite-api:2.14.0")
     implementation ("org.tensorflow:tensorflow-lite:2.14.0")
-//    implementation ("org.tensorflow:tensorflow-lite-select-tf-ops:2.14.0")
-////    implementation ("org.tensorflow:tensorflow-lite-select-tf-ops:2.5.0")
-//
-//    implementation ("org.tensorflow:tensorflow-lite-gpu:2.14.0")
-//    implementation ("org.tensorflow:tensorflow-lite-gpu-api:2.14.0")
-//    implementation ("org.tensorflow:tensorflow-lite-gpu-delegate-plugin:0.4.0")
+
+    implementation ("org.tensorflow:tensorflow-lite-gpu:2.14.0")
+    implementation ("org.tensorflow:tensorflow-lite-gpu-api:2.14.0")
+    implementation ("org.tensorflow:tensorflow-lite-gpu-delegate-plugin:0.4.0")
     implementation ("org.tensorflow:tensorflow-lite-support:0.4.2")
 
     implementation("androidx.core:core-ktx:1.9.0")
